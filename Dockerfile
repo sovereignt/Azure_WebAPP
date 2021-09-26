@@ -14,7 +14,7 @@ RUN yum install -y nginx && yum install -y python3 && yum install -y net-tools &
 RUN pip3 install flask
 
 # 工作目录
-WORKDIR /qytang
+WORKDIR /sov
 
 # 拷贝APP
 COPY app.py .
@@ -26,4 +26,4 @@ RUN dos2unix app.py
 RUN chmod +x app.py
 
 # 启动Nginx
-ENTRYPOINT ["/qytang/app.py"]
+ENTRYPOINT ["/sov/app.py"]
